@@ -27,14 +27,29 @@ pipeline {
   } 
   post {
     unstable {
+         script {
+            sh "echo hello-unstable"
+        }
     }
     failure {
+         script {
+            sh "echo hello-failure"
+        }
     }
     aborted {
+        script {
+            sh "echo hello-aborted"
+        }
     }
     success {
+         script {
+            sh "echo hello-success"
+        }
     }
     cleanup {
+         script {
+            sh "echo hello-cleanup"
+        }
     }
   }
 }
